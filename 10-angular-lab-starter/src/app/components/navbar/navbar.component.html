@@ -1,0 +1,28 @@
+<header class="topbar">
+  <nav class="container row between">
+    <a routerLink="/" class="brand">ShopEase</a>
+
+    <div class="row">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        Home
+      </a>
+      <a routerLink="/shop" routerLinkActive="active" class="nav-link">Shop</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">About Us</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact Us</a>
+
+      <!-- #Task 8 Bounce: Implement the sign-in link in the navbar.
+      - Uncomment the <a> element below.
+      - Bind its click event to the component's login() method (which navigates to /login).
+      or if authenticated bind it to dashboard() method (which navigates to /dashboard).
+      - Use routerLinkActive to apply the "active" class when the link is active.
+      - Use the component's isAuthenticated() method to conditionally show either
+        -->
+
+      <!-- <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">
+        Dashboard
+      </a> -->
+
+      <!-- <a routerLink="/login" class="nav-link">Sign in</a> -->
+    </div>
+  </nav>
+</header>

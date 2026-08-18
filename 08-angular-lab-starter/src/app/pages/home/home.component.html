@@ -1,0 +1,11 @@
+<app-hero />
+
+@defer {
+  <app-products />
+} @loading (minimum 1000ms) {
+  <p>...</p>
+} @placeholder (minimum 20ms) {
+  <p>Products loading…</p>
+} @error {
+  <p>error</p>
+}

@@ -1,0 +1,38 @@
+<section class="container page">
+  <h2>Products</h2>
+
+  <!--
+    #Task 7: Replace the placeholder below with Angular's @for control-flow
+    block, iterating over the products array and tracking each entry by its
+    id, with an @empty branch that shows a message when the list is empty.
+    For every product, render a card that displays its SKU, title,
+    description, and price, and give each card an even/odd modifier class
+    based on whether the product's id is even or odd — see the
+    .product-card.even / .product-card.odd rules in styles.css for the
+    resulting colors.
+  -->
+  <div class="grid">
+    @for (
+      product of products;
+      track product.id;
+      let i = $index;
+      let isEven = $even
+    ) {
+      <p
+        class="product-card"
+        [ngClass]="{
+          even: isEven,
+          odd: !isEven,
+        }"
+      >
+        {{ product.title }} - ${{ product.price }}-{{ product.SKU }}-{{
+          product.category
+        }}
+      </p>
+    } @empty {
+      <p>No products found.</p>
+    }
+
+    <!-- <p>TODO: render products here with</p> -->
+  </div>
+</section>

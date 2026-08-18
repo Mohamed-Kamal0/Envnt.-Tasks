@@ -1,0 +1,27 @@
+<section class="container page">
+  <h2>Products</h2>
+
+  <!--
+    #Task 9: Once ProductsComponent exposes loading and error state (see
+    products.component.ts), build the template branches for each state:
+    show a loading skeleton/placeholder while the request is in flight,
+    show an error message with a retry button if the request failed, and
+    show the product grid only once loading has finished successfully.
+  -->
+  @for (
+    product of products;
+    track product.id;
+    let i = $index;
+    let isEven = $even
+  ) {
+    @defer {
+      <app-product-card (add)="handleAdd($event)" [productData]="products[i]" />
+    } @loading (minimum 1000ms) {
+      <p>...</p>
+    } @placeholder (minimum 20ms) {
+      <p>Products loading…</p>
+    } @error {
+      <p>error</p>
+    }
+  }
+</section>

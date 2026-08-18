@@ -1,0 +1,57 @@
+<!--
+  #Task 6: Build the sign-in reactive form here.
+  1. Import ReactiveFormsModule in login.component.ts and add it to the
+     component's imports array.
+  2. Bind the <form> to the component's FormGroup with [formGroup], and hook
+     its submit event up to the component's onSubmit() handler.
+  3. Give each input a formControlName matching its control in the FormGroup
+     ("email" / "password"). Reactive forms need no `name` attribute — the
+     control name is what registers the input with the group.
+  4. Show a per-field validation hint once a control is invalid and the user
+     has actually touched it (read .invalid and .touched off the control).
+  5. Show the component's errorMessage when present.
+  6. Disable the submit button while the form is invalid or a submission is
+     already in progress, based on the form group's validity state and the
+     component's submitting flag, and reflect the submitting state in the
+     button's label.
+
+  Note: keep the validators in the FormGroup only. Angular's `required` /
+  `minlength` HTML attributes also register validators on a reactive control,
+  so adding them here as well would define the same rule in two places.
+-->
+
+<section class="container page narrow stack">
+  <h1 style="text-align: center">Sign in</h1>
+
+  <form class="card stack" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field">
+      <label for="email">Email</label>
+      <input
+        formControlName="name"
+        id="email"
+        class="input"
+        placeholder="you@example.com"
+      />
+      <small class="error"></small>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input
+        formControlName="password"
+        id="password"
+        class="input"
+        type="password"
+      />
+      <small class="error"></small>
+    </div>
+
+    <p class="error"></p>
+    <button [disabled]="form.invalid">submit</button>
+
+    <p class="muted" style="font-size: 0.85rem; text-align: center; margin: 0">
+      Sign in with an account your API's <code>POST /auth/login</code> endpoint
+      accepts — the credentials go straight to the backend.
+    </p>
+  </form>
+</section>

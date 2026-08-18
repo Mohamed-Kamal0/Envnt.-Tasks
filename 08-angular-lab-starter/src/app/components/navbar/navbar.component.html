@@ -1,0 +1,23 @@
+<!--
+  #Task 4: Convert each plain anchor below into a routed link pointing at
+  its matching page — Home, Shop, About Us, and Contact Us — and highlight
+  whichever link matches the current route. The Home link needs an
+  exact-match option so it does not stay highlighted while viewing every
+  other route.
+-->
+<header class="topbar">
+  <nav class="container row between">
+    <a href="#" class="brand">ShopEase</a>
+
+    <div class="row">
+      <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/shop" routerLinkActive="active" class="nav-link">Shop</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link"
+        >About Us</a
+      >
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link"
+        >Contact Us</a
+      >
+    </div>
+  </nav>
+</header>

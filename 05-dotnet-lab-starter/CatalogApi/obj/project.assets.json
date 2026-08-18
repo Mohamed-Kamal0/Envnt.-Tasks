@@ -2986,11 +2986,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\envnt\\Envnt.-Tasks\\05-dotnet-lab-starter\\CatalogApi\\CatalogApi.csproj",
+      "projectUniqueName": "D:\\envnt\\Envnt.-Tasks\\05-dotnet-lab-starter\\CatalogApi\\CatalogApi.csproj",
       "projectName": "CatalogApi",
-      "projectPath": "d:\\envnt\\Envnt.-Tasks\\05-dotnet-lab-starter\\CatalogApi\\CatalogApi.csproj",
+      "projectPath": "D:\\envnt\\Envnt.-Tasks\\05-dotnet-lab-starter\\CatalogApi\\CatalogApi.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "d:\\envnt\\Envnt.-Tasks\\05-dotnet-lab-starter\\CatalogApi\\obj\\",
+      "outputPath": "D:\\envnt\\Envnt.-Tasks\\05-dotnet-lab-starter\\CatalogApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3067,7 +3067,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

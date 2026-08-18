@@ -73,7 +73,16 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+{
+    builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+});
+});
 var app = builder.Build();
+app.UseCors();
+
 
 // Create/upgrade the database and seed demo data on startup, so the API just works.
 using (var scope = app.Services.CreateScope())

@@ -1,0 +1,10 @@
+# .NET API (api/)
+**/bin/
+**/obj/
+*.user
+.env
+
+# Angular app (web/)
+node_modules/
+dist/
+.angular/

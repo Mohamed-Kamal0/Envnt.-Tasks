@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Create CatalogApi product constants",
+			"type": "shell",
+			"command": "mkdir -p \"13-vibe-lab-starter/api/CatalogApi/Constants\" && cat > \"13-vibe-lab-starter/api/CatalogApi/Constants/Products.cs\" <<'EOF'\nusing CatalogApi.Models;\n\nnamespace CatalogApi.Constants;\n\npublic static class Products\n{\n    public static IReadOnlyList<Product> All { get; } =\n    [\n        new Product { Id = 1, Name = \"Mechanical Keyboard\", Category = \"Peripherals\", Price = 89.99m, InStock = true },\n        new Product { Id = 2, Name = \"Wireless Mouse\",      Category = \"Peripherals\", Price = 24.50m, InStock = true },\n        new Product { Id = 3, Name = \"27\\\" Monitor\",        Category = \"Displays\",    Price = 219.00m, InStock = true },\n        new Product { Id = 4, Name = \"USB-C Hub\",           Category = \"Accessories\", Price = 39.95m, InStock = true },\n        new Product { Id = 5, Name = \"Laptop Stand\",        Category = \"Accessories\", Price = 32.00m, InStock = true },\n        new Product { Id = 6, Name = \"Webcam 1080p\",        Category = \"Peripherals\", Price = 54.00m, InStock = false },\n        new Product { Id = 7, Name = \"Ultrawide Monitor\",   Category = \"Displays\",    Price = 429.00m, InStock = true },\n        new Product { Id = 8, Name = \"Desk Mat\",            Category = \"Accessories\", Price = 18.00m, InStock = true }\n    ];\n}\nEOF\nls -l \"13-vibe-lab-starter/api/CatalogApi/Constants/Products.cs\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Create CatalogApi constants file",
+			"type": "shell",
+			"command": "mkdir \"d:\\envnt\\Envnt.-Tasks\\13-vibe-lab-starter\\api\\CatalogApi\\Constants\" 2>nul && (\n echo using CatalogApi.Models;\n echo.\n echo namespace CatalogApi.Constants;\n echo.\n echo public static class Products\n echo {\n echo     public static IReadOnlyList<Product> All { get; } =\n echo     [\n echo         new Product { Id = 1, Name = \"Mechanical Keyboard\", Category = \"Peripherals\", Price = 89.99m, InStock = true },\n echo         new Product { Id = 2, Name = \"Wireless Mouse\",      Category = \"Peripherals\", Price = 24.50m, InStock = true },\n echo         new Product { Id = 3, Name = \"27\\\" Monitor\",        Category = \"Displays\",    Price = 219.00m, InStock = true },\n echo         new Product { Id = 4, Name = \"USB-C Hub\",           Category = \"Accessories\", Price = 39.95m, InStock = true },\n echo         new Product { Id = 5, Name = \"Laptop Stand\",        Category = \"Accessories\", Price = 32.00m, InStock = true },\n echo         new Product { Id = 6, Name = \"Webcam 1080p\",        Category = \"Peripherals\", Price = 54.00m, InStock = false },\n echo         new Product { Id = 7, Name = \"Ultrawide Monitor\",   Category = \"Displays\",    Price = 429.00m, InStock = true },\n echo         new Product { Id = 8, Name = \"Desk Mat\",            Category = \"Accessories\", Price = 18.00m, InStock = true }\n echo     ];\n echo }\n)> \"d:\\envnt\\Envnt.-Tasks\\13-vibe-lab-starter\\api\\CatalogApi\\Constants\\Products.cs\" && dir \"d:\\envnt\\Envnt.-Tasks\\13-vibe-lab-starter\\api\\CatalogApi\\Constants\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Create directory",
+			"type": "shell",
+			"command": "mkdir \"d:\\envnt\\Envnt.-Tasks\\13-vibe-lab-starter\\api\\CatalogApi\\Constants\" && dir \"d:\\envnt\\Envnt.-Tasks\\13-vibe-lab-starter\\api\\CatalogApi\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Ensure Claude commands dir",
+			"type": "shell",
+			"command": "cmd /c \"if not exist \"D:\\envnt\\Envnt.-Tasks\\15-vibe-lab-starter\\.claude\\commands\" mkdir \"D:\\envnt\\Envnt.-Tasks\\15-vibe-lab-starter\\.claude\\commands\" && if exist \"D:\\envnt\\Envnt.-Tasks\\15-vibe-lab-starter\\.claude\\commands\" echo EXISTS\"",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

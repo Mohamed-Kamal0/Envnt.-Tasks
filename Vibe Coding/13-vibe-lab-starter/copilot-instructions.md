@@ -1,0 +1,6 @@
+- .NET 10 Web API in api/, Angular 18 standalone app in web/. No new NuGet or npm packages.
+- Controllers stay thin: request in, service call, DTO out, status code. No query logic.
+- Entities never cross the boundary — everything returned is a record DTO from Dtos/.
+- Angular: one component per file, kebab-case filenames; only services touch HttpClient.
+- Prices are numbers; display them with .toFixed(2).
+- After any change, the app must still: show "Loading products…", then render all products.

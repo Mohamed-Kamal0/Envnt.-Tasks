@@ -1,0 +1,41 @@
+<section class="container page">
+  <h2>Products</h2>
+
+  @if (loading) {
+    <div class="grid">
+      @for (n of [1, 2, 3, 4]; track n) {
+        <div class="skeleton" style="height: 140px"></div>
+      }
+    </div>
+  }
+
+  @if (errorMessage) {
+    <div class="alert alert-error row between">
+      <span>{{ errorMessage }}</span>
+      <button class="btn btn-sm btn-danger" (click)="load()">Retry</button>
+    </div>
+  }
+
+  @if (!loading && !errorMessage) {
+    <div class="grid">
+      @for (product of products; track product.id) {
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">
+              {{ product.price }}
+            </p>
+            <p (click)="editProduct(product.id)" class="btn btn-primary">
+              edit
+            </p>
+            <p (click)="viewProduct(product.id)" class="btn btn-primary">
+              view
+            </p>
+          </div>
+        </div>
+      } @empty {
+        <p class="muted">No products found.</p>
+      }
+    </div>
+  }
+</section>

@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build catalog app",
+			"type": "shell",
+			"command": "npm install && npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "install-and-build",
+			"type": "shell",
+			"command": "npm install && npm run build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "install-and-build",
+			"type": "shell",
+			"command": "npm install && npm run build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "install-and-build-2",
+			"type": "shell",
+			"command": "npm install && npm run build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Build Web",
+			"type": "shell",
+			"command": "npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		}
+	]
+}

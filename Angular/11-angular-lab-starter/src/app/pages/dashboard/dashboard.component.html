@@ -1,0 +1,17 @@
+<section class="container page">
+  <div class="row between">
+    <h1>Dashboard</h1>
+    <button class="btn btn-ghost" (click)="logout()">Sign out</button>
+  </div>
+
+  <div class="dash-layout">
+    <aside class="card dash-side">
+      <a routerLink="products" class="nav-link">Products</a>
+      <a routerLink="/shop" class="nav-link">← Back to shop</a>
+    </aside>
+
+    <div>
+      <router-outlet />
+    </div>
+  </div>
+</section>

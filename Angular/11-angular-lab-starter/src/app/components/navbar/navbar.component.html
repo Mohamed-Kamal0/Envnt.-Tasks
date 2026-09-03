@@ -1,0 +1,24 @@
+<header class="topbar">
+  <nav class="container row between">
+    <a routerLink="/" class="brand">ShopEase</a>
+
+    <div class="row">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        Home
+      </a>
+      <a routerLink="/shop" routerLinkActive="active" class="nav-link">Shop</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">About Us</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact Us</a>
+
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="active"
+        class="nav-link"
+        *ngIf="auth.isAuthenticated()"
+      >
+        Dashboard
+      </a>
+      <a routerLink="/login" class="nav-link" *ngIf="!auth.isAuthenticated()">Sign in</a>
+    </div>
+  </nav>
+</header>

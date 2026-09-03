@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Catalog API",
+			"type": "shell",
+			"command": "dotnet run --urls http://localhost:5144",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build API",
+			"type": "shell",
+			"command": "dotnet build --nologo",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			]
+		}
+	]
+}

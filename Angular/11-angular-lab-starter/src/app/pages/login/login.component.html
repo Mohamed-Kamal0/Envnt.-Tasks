@@ -1,0 +1,42 @@
+<section class="container page narrow stack">
+  <h1 style="text-align: center">Sign in</h1>
+
+  <form class="card stack" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="field">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        class="input"
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+        placeholder="you@example.com"
+      />
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        class="input"
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+        minlength="6"
+      />
+    </div>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <button class="btn btn-block" type="submit" [disabled]="loginForm.invalid || submitting">
+      {{ submitting ? 'Signing in…' : 'Sign in' }}
+    </button>
+
+    <p class="muted" style="font-size: 0.85rem; text-align: center; margin: 0">
+      Any email + a 6-character password works while the API has no
+      <code>/auth/login</code> endpoint yet.
+    </p>
+  </form>
+</section>
